@@ -1,7 +1,13 @@
 export default function() {
-  this.get('/rooms', function(db, request) {
+  this.get('/rooms', function(db) {
     return {
       data: db.rooms
+    };
+  });
+  this.get('/rooms/:id', function(db, request) {
+    let id = request.params.id;
+    return {
+      data: db.rooms.filter(room => room.id === id)
     };
   });
   // this.get('/rooms/:id');
