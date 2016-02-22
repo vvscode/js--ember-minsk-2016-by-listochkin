@@ -1,0 +1,8 @@
+{{#form-for newMessage submit=submit as |f| }}
+  {{f.text-field "body"}}
+
+  {{f.reset  "Clear"}}
+  {{f.submit "Send"}}
+{{/form-for}}
+
+{{yield}}
