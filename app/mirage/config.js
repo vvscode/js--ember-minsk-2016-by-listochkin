@@ -1,6 +1,10 @@
 export default function() {
-  this.get('/rooms');
-  this.get('/rooms/:id');
+  this.get('/rooms', function(db, request) {
+    return {
+      data: db.rooms
+    };
+  });
+  // this.get('/rooms/:id');
 
   // These comments are here to help you get started. Feel free to delete them.
 
