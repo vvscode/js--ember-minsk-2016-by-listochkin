@@ -1,4 +1,4 @@
-<ul>
+<ul data-set="room-list">
   {{#each model as |item|}}
       <li>{{#link-to "room" item.id item.name}}{{item.name}}{{/link-to}}</li>
   {{/each}}
