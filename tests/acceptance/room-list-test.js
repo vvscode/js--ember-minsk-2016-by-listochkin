@@ -13,3 +13,13 @@ test('visiting room-list at /', function(assert) {
     assert.equal(currentURL(), '/');
   });
 });
+
+
+test('opening room by link from list', function(assert) {
+  visit('/');
+  click('ul li:first a');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/r/11/Room 1');
+  });
+});

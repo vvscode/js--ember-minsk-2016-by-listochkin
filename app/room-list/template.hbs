@@ -1,6 +1,6 @@
 <ul>
   {{#each model as |item|}}
-      <li>{{item.name}}</li>
+      <li>{{#link-to "room" item.id item.name}}{{item.name}}{{/link-to}}</li>
   {{/each}}
 </ul>
 
